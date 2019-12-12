@@ -43,49 +43,34 @@ class FirstViewController: UIViewController {
         
         if isOn{
             var bmiweight = 0
-                   var bmiheight = 0
-                   var final = 0
-                   var weight = Int(Weight.text!)
-                   var height = Int(Height.text!)
-                    
-                   bmiweight = weight! * 703
-                   bmiheight = height! * height!
+            var bmiheight = 0
+            var final = 0
+            var weight = Int(Weight.text!)
+            var height = Int(Height.text!)
+            bmiweight = (weight! * 703)
+            bmiheight = (height! * height!)
                    
-                   final = bmiweight / bmiheight
+                   final = (bmiweight / bmiheight)
                    
             value.text = String(final)
         }
-        else
-               {
-                    var bmiweight = 0
-                                    var bmiheight = 0
-                                    var finalval = 0
-                                    var weight = Int(Weight.text!)
-                                    var height = Int(Height.text!)
-                                     
-                                    bmiweight = weight!
-                                    bmiheight = height! * height!
-                                    
-                                    finalval = bmiweight / bmiheight
-                                   
-                                   
-                   
-                    value.text = String(finalval)
-                                    
-                                    
-                             
-                       
-                  
-                   
+        else{
+            var bmiweight = 0
+            var bmiheight = 0
+            var finalval = 0
+            var weight = Int(Weight.text!)
+            var height = Int(Height.text!)
+            bmiweight = weight!
+            bmiheight = (height! * height!)
+            finalval = (bmiweight / bmiheight)
+            value.text = String(finalval)
                }
 
     }
 
     
 
-    @IBAction func Calculate(_ sender: Any) {
-        
-    }
+   
     
     
     @IBAction func Submit(_ sender: Any) {
