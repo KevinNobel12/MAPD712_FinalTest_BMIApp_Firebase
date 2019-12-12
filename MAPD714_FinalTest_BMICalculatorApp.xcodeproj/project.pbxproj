@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051AB3BE358AA54D56D6841C /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB4A468260B2BA9AAEB8023 /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework */; };
 		FEEF7D5B23A1B9BE001657BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5A23A1B9BE001657BC /* AppDelegate.swift */; };
 		FEEF7D5D23A1B9BE001657BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5C23A1B9BE001657BC /* SceneDelegate.swift */; };
 		FEEF7D5F23A1B9BE001657BC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5E23A1B9BE001657BC /* FirstViewController.swift */; };
@@ -14,9 +15,13 @@
 		FEEF7D6423A1B9BE001657BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEF7D6223A1B9BE001657BC /* Main.storyboard */; };
 		FEEF7D6623A1B9BE001657BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEF7D6523A1B9BE001657BC /* Assets.xcassets */; };
 		FEEF7D6923A1B9BE001657BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEF7D6723A1B9BE001657BC /* LaunchScreen.storyboard */; };
+		FEEF7D7123A1BE9B001657BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEEF7D7023A1BE9B001657BC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5901886451646455F8A872DD /* Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
+		AE368F3BB5E4D1D4F391B615 /* Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AEB4A468260B2BA9AAEB8023 /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAPD714_FinalTest_BMICalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEF7D5723A1B9BE001657BC /* MAPD714_FinalTest_BMICalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPD714_FinalTest_BMICalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEF7D5A23A1B9BE001657BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEF7D5C23A1B9BE001657BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		FEEF7D6523A1B9BE001657BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEEF7D6823A1B9BE001657BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEEF7D6A23A1B9BE001657BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEF7D7023A1BE9B001657BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051AB3BE358AA54D56D6841C /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F9ECE2C3CF8AA20EC79B3B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE368F3BB5E4D1D4F391B615 /* Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig */,
+				5901886451646455F8A872DD /* Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F94424474FCB0A4483BB0B09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB4A468260B2BA9AAEB8023 /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEEF7D4E23A1B9BE001657BC = {
 			isa = PBXGroup;
 			children = (
 				FEEF7D5923A1B9BE001657BC /* MAPD714_FinalTest_BMICalculatorApp */,
 				FEEF7D5823A1B9BE001657BC /* Products */,
+				9F9ECE2C3CF8AA20EC79B3B4 /* Pods */,
+				F94424474FCB0A4483BB0B09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +92,7 @@
 				FEEF7D6223A1B9BE001657BC /* Main.storyboard */,
 				FEEF7D6523A1B9BE001657BC /* Assets.xcassets */,
 				FEEF7D6723A1B9BE001657BC /* LaunchScreen.storyboard */,
+				FEEF7D7023A1BE9B001657BC /* GoogleService-Info.plist */,
 				FEEF7D6A23A1B9BE001657BC /* Info.plist */,
 			);
 			path = MAPD714_FinalTest_BMICalculatorApp;
@@ -77,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEEF7D6D23A1B9BE001657BC /* Build configuration list for PBXNativeTarget "MAPD714_FinalTest_BMICalculatorApp" */;
 			buildPhases = (
+				975C4A917C202C279BA55C81 /* [CP] Check Pods Manifest.lock */,
 				FEEF7D5323A1B9BE001657BC /* Sources */,
 				FEEF7D5423A1B9BE001657BC /* Frameworks */,
 				FEEF7D5523A1B9BE001657BC /* Resources */,
+				9EB44143712E3FACA73A9E1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,12 +159,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEF7D6923A1B9BE001657BC /* LaunchScreen.storyboard in Resources */,
+				FEEF7D7123A1BE9B001657BC /* GoogleService-Info.plist in Resources */,
 				FEEF7D6623A1B9BE001657BC /* Assets.xcassets in Resources */,
 				FEEF7D6423A1B9BE001657BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		975C4A917C202C279BA55C81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAPD714_FinalTest_BMICalculatorApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EB44143712E3FACA73A9E1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEEF7D5323A1B9BE001657BC /* Sources */ = {
@@ -286,6 +359,7 @@
 		};
 		FEEF7D6E23A1B9BE001657BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE368F3BB5E4D1D4F391B615 /* Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +378,7 @@
 		};
 		FEEF7D6F23A1B9BE001657BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5901886451646455F8A872DD /* Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
