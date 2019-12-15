@@ -11,83 +11,136 @@ import FirebaseFirestore
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var Name: UITextField!
+    @IBOutlet weak var name: UITextField!
     
-    @IBOutlet weak var Age: UITextField!
+    @IBOutlet weak var age: UITextField!
     
-    @IBOutlet weak var Gender: UITextField!
+    @IBOutlet weak var gender: UITextField!
     
-    @IBOutlet weak var Weight: UITextField!
+    @IBOutlet weak var weight: UITextField!
     
-    @IBOutlet weak var Height: UITextField!
+    @IBOutlet weak var height: UITextField!
     
-    @IBOutlet weak var value: UILabel!
-    
-    var db:Firestore?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        db = Firestore.firestore()
-        // Do any additional setup after loading the view.
-    }
-    
-    var isOn = true
-    
-    
-    @IBAction func switched(_ sender: Any) {
-        
-        isOn = !isOn
-        var height = 0
-        var weight = 0
-        
-        if isOn{
-            var bmiweight = 0
-            var bmiheight = 0
-            var final = 0
-            var weight = Int(Weight.text!)
-            var height = Int(Height.text!)
-            bmiweight = (weight! * 703)
-            bmiheight = (height! * height!)
-                   
-                   final = (bmiweight / bmiheight)
-                   
-            value.text = String(final)
-        }
-        else{
-            var bmiweight = 0
-            var bmiheight = 0
-            var finalval = 0
-            var weight = Int(Weight.text!)
-            var height = Int(Height.text!)
-            bmiweight = weight!
-            bmiheight = (height! * height!)
-            finalval = (bmiweight / bmiheight)
-            value.text = String(finalval)
-               }
-
-    }
-
-    
-
    
     
-    
-    @IBAction func Submit(_ sender: Any) {
-        // Add a new document in collection
-        db?.collection("Users").document("Values").setData([
-            "Name": Name.text,
-            "Age": Age.text,
-            "Gender": Gender.text,
-            "Weight" : Weight.text,
-            "Height" : Height.text
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
+    @IBOutlet weak var Switch: UISwitch!
+        @IBAction func calculate(_ sender: UIButton) {
+            var Name = name.text!
+            var Age = age.text!
+            var Gender = gender.text!
+            var Weight = weight.text!
+            var Height = height.text!
+            
+            var db = Firestore.firestore()
+            if(Switch.isOn){
+                var  data =  [
+                    "name": Name,
+                    "age": Age,
+                    "gender": Gender,
+                    "weight" : Weight+"pd",
+                    "height" : Height+"in"]
+                
+                db.collection("BMI").document("data").setData(data) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        var wei = Double(Weight)
+                        var hei = Double(Height)
+                        var bmi = Double(wei!*703/(hei!*hei!))
+                        let date = Date()
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "dd.MM.yyyy"
+                        let result = formatter.string(from: date)
+                        var timestamp = String(Int64(Date().timeIntervalSince1970*1000))
+                        
+                        db.collection("entry").document(timestamp).setData([
+                            "date": result,
+                            "weight" : Weight+"pd",
+                            "height" : Height+"in",
+                            "bmi" : ""+String (format: "%.\(3)f",bmi)+" pd/in2",
+                            "timestamp" : timestamp
+                        ]) { err in
+                            if let err = err {
+                                print("Error writing document: \(err)")
+                                
+                            }else{
+                                var alertController = UIAlertController(title: "BMI", message:
+                                    "BMI is "+String (format: "%.\(3)f",bmi)+" pd/in2" as! String, preferredStyle: .alert)
+                                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default,handler: {
+                                    (action) in self.performSegue(withIdentifier: "table", sender: nil)
+                                }))
+                                self.present(alertController, animated: true, completion: nil)
+                                
+                            }
+                            
+                            
+                            
+                        }
+                    }
+                }
+            }
+            else{
+                var  data =  [
+                    "name": Name,
+                    "age": Age,
+                    "gender": Gender,
+                    "weight" : Weight+"kg",
+                    "height" : Height+"m"]
+                
+                db.collection("BMI").document("data").setData(data) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        var wei = Double(Weight)
+                        var hei = Double(Height)
+                        var bmi = Double(wei!/(hei!*hei!))
+                        let date = Date()
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "dd.MM.yyyy"
+                        let result = formatter.string(from: date)
+                        var timestamp = String(Int64(Date().timeIntervalSince1970*1000))
+                        
+                        db.collection("entry").document(timestamp).setData([
+                            "date": result,
+                            "weight" : Weight+"kg",
+                            "height" : Height+"m",
+                            "bmi" : ""+String (format: "%.\(3)f",bmi)+" kg/m2",
+                            "timestamp" : timestamp
+                        ]) { err in
+                            if let err = err {
+                                print("Error writing document: \(err)")
+                                
+                            }else{
+                                var alertController = UIAlertController(title: "BMI", message:
+                                    "BMI is "+String (format: "%.\(3)f",bmi)+" kg/m2" as! String, preferredStyle: .alert)
+                                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default,handler: {
+                                    (action) in self.performSegue(withIdentifier: "table", sender: nil)
+                                }))
+                                self.present(alertController, animated: true, completion: nil)
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            var db = Firestore.firestore()
+            
+            let docRef = db.collection("BMI").document("data")
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "secondviewcontroller") as! SecondViewController
+                    self.present(mainVC, animated: true, completion: nil)
+                } else {
+                    print("Document does not exist")
+                }
             }
         }
     }
-}
 

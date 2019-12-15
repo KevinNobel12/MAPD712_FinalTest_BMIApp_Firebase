@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		051AB3BE358AA54D56D6841C /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB4A468260B2BA9AAEB8023 /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework */; };
+		FE7F17D423A5FB2D004EAB8C /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F17D323A5FB2D004EAB8C /* EditViewController.swift */; };
+		FE7F17D623A5FD26004EAB8C /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7F17D523A5FD26004EAB8C /* cell.swift */; };
 		FEEF7D5B23A1B9BE001657BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5A23A1B9BE001657BC /* AppDelegate.swift */; };
 		FEEF7D5D23A1B9BE001657BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5C23A1B9BE001657BC /* SceneDelegate.swift */; };
 		FEEF7D5F23A1B9BE001657BC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF7D5E23A1B9BE001657BC /* FirstViewController.swift */; };
@@ -22,6 +24,8 @@
 		5901886451646455F8A872DD /* Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		AE368F3BB5E4D1D4F391B615 /* Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-MAPD714_FinalTest_BMICalculatorApp/Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB4A468260B2BA9AAEB8023 /* Pods_MAPD714_FinalTest_BMICalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAPD714_FinalTest_BMICalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7F17D323A5FB2D004EAB8C /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		FE7F17D523A5FD26004EAB8C /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
 		FEEF7D5723A1B9BE001657BC /* MAPD714_FinalTest_BMICalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPD714_FinalTest_BMICalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEF7D5A23A1B9BE001657BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEF7D5C23A1B9BE001657BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +56,6 @@
 				AE368F3BB5E4D1D4F391B615 /* Pods-MAPD714_FinalTest_BMICalculatorApp.debug.xcconfig */,
 				5901886451646455F8A872DD /* Pods-MAPD714_FinalTest_BMICalculatorApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +97,8 @@
 				FEEF7D6723A1B9BE001657BC /* LaunchScreen.storyboard */,
 				FEEF7D7023A1BE9B001657BC /* GoogleService-Info.plist */,
 				FEEF7D6A23A1B9BE001657BC /* Info.plist */,
+				FE7F17D323A5FB2D004EAB8C /* EditViewController.swift */,
+				FE7F17D523A5FD26004EAB8C /* cell.swift */,
 			);
 			path = MAPD714_FinalTest_BMICalculatorApp;
 			sourceTree = "<group>";
@@ -214,6 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7F17D423A5FB2D004EAB8C /* EditViewController.swift in Sources */,
+				FE7F17D623A5FD26004EAB8C /* cell.swift in Sources */,
 				FEEF7D6123A1B9BE001657BC /* SecondViewController.swift in Sources */,
 				FEEF7D5F23A1B9BE001657BC /* FirstViewController.swift in Sources */,
 				FEEF7D5B23A1B9BE001657BC /* AppDelegate.swift in Sources */,
